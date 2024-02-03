@@ -1,0 +1,116 @@
+
+.video-box {
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px; 
+  position: relative; }
+
+video{
+height: 100%;
+width: 100%;
+z-index: -100;
+padding: 0px;
+}
+
+/* .nav-box */
+.logo, nav{ 
+position: absolute;
+top: 15%;
+width: 100%;
+ height: 100px;
+ }
+
+/* 
+ #logo{
+  color: white;
+ }
+  #nav-a1,#nav-a2,#nav-a3, #search-btn{
+    color: wheat;
+  } */
+
+
+.logo-title {
+text-align: center; 
+ z-index: 100; 
+ color:  white; 
+  font-family: 'Cafe24Moyamoya-Regular-v1.0';
+font-size: 150px;
+margin-top: 20px;
+}
+
+.body-box{
+width: 100%;
+height: 345px;
+/* background-color: tomato; */
+}
+
+/* 368*326 */
+.category-box{
+  margin-top: 20px;
+  border: 3px double green;
+  margin-left: 30px;
+  width: 60%;
+  border-radius: 10px;
+  float: left;
+  }
+
+.category-header{
+background-color: yellowgreen;
+border: none;
+width: 300px;
+height: 80px;
+margin-left: 400px;
+margin-bottom: 20px;
+margin-top: 20px;
+border-radius: 30px;
+  font-size: 20px;
+}
+
+.btn{
+margin: 10px 70px;
+width: 230px;
+height: 80px;
+  font-size: 20px;
+}
+
+
+.mbti-box{
+  margin-top: 20px;
+  border: 3px double green;
+  margin-left: 20px;
+  width: 35%;
+  height: 326px;
+  border-radius: 10px;
+  float: left;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  }
+
+  .mbti{
+  width: 100%;
+  height: 326px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-radius: 10px;
+
+
+  }
+
+  .mbti-img{
+  background-image: url('../img/thumbnail_pick.jpg');
+    border: 3px double green;
+
+  }
+
+
+
+
+
+
+

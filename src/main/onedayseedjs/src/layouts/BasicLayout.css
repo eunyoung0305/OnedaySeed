@@ -1,0 +1,39 @@
+
+.nav-link{
+  margin-top: 20px;
+}
+
+#logo{
+  font-size: 50px;
+  color: #70af85;
+  font-family: 'Cafe24Moyamoya-Regular-v1.0';
+}
+
+#search-input{
+  margin-top: 10px;
+  height: 40px;
+}
+
+#search-btn{
+  height: 40px;
+}
+
+#nav{
+  margin-top: 10px;
+}
+
+
+
+.footer-body{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width:700px;
+  height: 120px;
+  margin: 20px auto;
+  clear: both;
+  font-size: 20px;
+} 
+.our-info, .not-host{
+    font-size: 14px;
+  }
