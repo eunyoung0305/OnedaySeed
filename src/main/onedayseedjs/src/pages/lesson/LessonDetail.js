@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import BasicLayout from "../../layouts/BasicLayout"
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import "./Lesson.css";
 
 function LessonDetail() {
   const location = useLocation();
@@ -64,27 +65,27 @@ function LessonDetail() {
         <form action="/cart" method="get">
           <fieldset style={{ textAlign: "center" }}>
             <img style={{ width: "600px", height: "600px" }} src="/boonga.jpg" width="800" />
-            <p>
-              <label className='btn' htmlFor="classTitle">- 클래스명 : </label>
+            <p className='fontNaming'>
+              <label className='btn fontNaming' id="fontNaming">🌱 클래스명 : </label>
               {lessonDetail.lessonName}<br />
             </p>
 
-            <p >
-              <label className='btn' htmlFor="classStartDay">- 클래스 날짜 : </label>
+            <p className='fontNaming'>
+              <label className='btn fontNaming' id="fontNaming" >🌱 클래스 날짜 : </label>
               {lessonDetail.lessonSchedule}<br />
             </p>
 
-            <p>
-              <label htmlFor="classStudentNum">- 인원 : &nbsp;</label>
+            <p className='fontNaming'>
+              <label className='fontNaming' id="fontNaming" >🌱 인원 : &nbsp;</label>
               <input value={numberOfStudents} className='styled-input' type='number' id='classStudentNum' onChange={handleInputChange} min='1'></input>
             </p>
 
-            <p>
-              <label className='btn' htmlFor="classCost">- 클래스 가격 : </label>
+            <p className='fontNaming'>
+              <label className='btn fontNaming' id="fontNaming" >🌱 클래스 가격 : </label>
               {lessonDetail.price}<br />
             </p>
 
-            <button className='btn w-btn-indigo-outline w-btn-green styled-input' type="button" onClick={handleAddToCart}>
+            <button id="cartBtn" className='btn w-btn-indigo-outline w-btn-green styled-input fontNaming' type="button" onClick={handleAddToCart}>
               CART
             </button>
           </fieldset>

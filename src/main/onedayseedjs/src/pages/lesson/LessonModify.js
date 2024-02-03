@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import { useLocation } from 'react-router-dom';
-
 import BasicLayout from "../../layouts/BasicLayout"
 import axios from 'axios';
+import "./Lesson.css";
 
 function LessonModify() {
   const location = useLocation();
@@ -68,10 +68,9 @@ function LessonModify() {
   return (
     <div>
       <BasicLayout>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
           <form onSubmit={handleSubmit}>
-            <h1>클래스 수정 페이지입니다</h1><br></br>
+            <h1 className="title-word"><b>클래스 수정 페이지</b></h1><br></br>
             <div>
               <label>
                 <h4>클래스명</h4>
@@ -136,8 +135,8 @@ function LessonModify() {
                 <hr />
               </label>     
             </div>
-            <Button type='submit'>수정</Button>
-            <Button onClick={handleDelete}>삭제</Button>
+            <Button type='submit' className='modifyPageBtn'>수정</Button>
+            <Button onClick={handleDelete} className='modifyPageBtn'>삭제</Button>
           </form>
         </div>
       </BasicLayout>

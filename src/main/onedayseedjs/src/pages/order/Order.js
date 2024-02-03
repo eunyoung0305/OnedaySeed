@@ -56,8 +56,8 @@ function OrderPage() {
             <div>
                 <BasicLaylout>
                 <div className="purchaseBox">
-                    <h1>구매내역</h1>
-                    <hr/>
+                    <h1 id="title"><b>구매내역</b></h1>
+                    
                     {orderItems.map((orders) => (
                         <div key={orders.orderId} className="orderItem">
                         <div className="class-img class-info"></div>
@@ -66,7 +66,7 @@ function OrderPage() {
                         <span className="class-count">결제 금액: {orders.orderPrice}</span>
                         <span className="class-count">구매 수량: {orders.count}</span>
                         <button className="class-status" onClick={() => cancelHandler(orders.orderId, orders.lessonName)}>
-                            {orders.orderStatus === 'ORDER' ? '구매 완료' : '구매 취소 완료'}</button>
+                            {orders.orderStatus === 'ORDER' ? '구매 취소 하기' : '구매 취소 완료'}</button>
                         </div>
                     ))}
                 </div>

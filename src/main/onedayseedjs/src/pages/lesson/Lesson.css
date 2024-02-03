@@ -1,0 +1,88 @@
+/* LessonList */
+
+.allLesson{
+  background-color: #70AF85;
+  border-radius: 5px ;
+  border: #70AF85 solid 1px;
+  margin: 10px;
+  color: white;
+  height: 100px;
+  width: 300px;
+  font-size: 35px;
+}
+
+.detailBtn{
+  background-color: #70AF85;
+  border-radius: 5px ;
+  border: #70AF85 solid 1px;
+  margin: 10px;
+  color: white;
+  height: 60px;
+  width: 100px;
+ }
+
+
+
+
+
+/* LessonMain */
+
+.title-word{
+  text-align: center;
+  color: #76BA99;
+}
+
+.classPlusBtn{
+  background-color: #70AF85;
+  border-radius: 5px ;
+  border: black solid 3px;
+  margin: 10px;
+  color: white;
+  height: 40px;
+  width: 150px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.lessonListBox{
+  background-color: #70AF85;
+  font-size: 25px;
+  border-radius: 50px;
+  margin: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 800px;
+  height: 50px;
+  padding-top: 5px;
+}
+
+.lessonMainForm{
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+}
+
+/* LessonModify */
+
+.modifyPageBtn{
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #70AF85  ;
+  color: white;
+  background-color: #70AF85;
+  margin-right: 20px;
+}
+
+/* LessonDetail */
+#fontNaming{
+  font-size: 25px;
+}
+
+#cartBtn{
+  border-radius: 5px;
+  background-color: #70AF85;
+  width: 150px;
+  font-size: 25px;
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import BasicLayout from "../../layouts/BasicLayout"
 import axios from 'axios';
+import "./Lesson.css";
 
 function LessonList() {
 
@@ -39,8 +40,8 @@ function LessonList() {
               <div className="container text-center">
                 <div className="row">
                   <div className="col-12" >
-                    <h1>검색 결과가 없습니다. 이런 강의는 어떠세요?</h1>
-                    <button className="btn btn-primary" id="allLesson"  onClick={() => navigate('/lesson/list')}>
+                    <h1>검색 결과가 없습니다.<br/> 이런 강의는 어떠세요?</h1>
+                    <button className="allLesson" onClick={() => navigate('/lesson/list')}>
                       모든 강의 보기
                     </button>
                   </div>
@@ -65,12 +66,12 @@ function LessonList() {
                       )
                       .map((lesson) => (
                           <div className="col-lg-6" key={lesson.lessonId}>
-                            <div className="card" style={{ width: '30rem' }}>
+                            <div className="card" style={{ width: '35rem' , marginRight:"15px"}}>
                               <img src="/boonga.jpg" className="card-img-top" alt="..." />
                               <div className="card-body">
                                 <h5 className="card-title">{lesson.lessonName}</h5>
                                 <h5 className="card-title">{lesson.lessonCategory}</h5>
-                                <button onClick={() => handleLessonClick(lesson.lessonId)}>상세 보기</button>
+                                <button className='detailBtn' onClick={() => handleLessonClick(lesson.lessonId)}>상세 보기</button>
                               </div>
                             </div>
                             <br />
@@ -87,16 +88,16 @@ function LessonList() {
         <div>
           <BasicLayout>
             <section>
-              <div className="container text-center">
+              <div className="container text-center" >
                 <div className="row">
                   {lessonList.map((lesson) => (
                       <div className="col-lg-6" key={lesson.lessonId}>
-                        <div className="card" style={{ width: '30rem' }}>
+                        <div className="card" style={{ width: '35rem' , marginRight:"15px"}}>
                           <img src="/boonga.jpg" className="card-img-top" alt="..." />
                           <div className="card-body">
                             <h5 className="card-title">{lesson.lessonName}</h5>
                             <h5 className="card-title">{lesson.lessonCategory}</h5>
-                            <button onClick={() => handleLessonClick(lesson.lessonId)}>상세 보기</button>
+                            <button className='detailBtn' onClick={() => handleLessonClick(lesson.lessonId)}>상세 보기</button>
                           </div>
                         </div>
                         <br />

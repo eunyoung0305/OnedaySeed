@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import BasicLayout from "../../layouts/BasicLayout"
+import "./Lesson.css";
 
 function LessonMain() {
 
@@ -31,27 +32,25 @@ function LessonMain() {
   return (
     <div>
       <BasicLayout>
-        <section>
-          <div style={{textAlign: "center"}}>
+        <section className='lessonMainForm'>
+          <div style={{textAlign: "center"}} >
             <b>
-              <span className="title-word">등록하신 CLASS 목록 및 현황 </span>
-              <Link to="/lesson/new" className="w-btn-green btn" type="button">
-                클래스 등록
-              </Link>
+              <h1 className="title-word"><b>등록된 CLASS 목록 및 현황</b></h1>
+               
+                <button className='classPlusBtn'><Link to="/lesson/new" className="w-btn-green btn" type="button">클래스 등록</Link></button>
             </b>
           </div>
           {lessons && lessons.length > 0 ? (
             lessons.map((lesson) => (
-              <div style={{textAlign: "center"}} key={lesson.lessonId}>
+              <div style={{textAlign: "center"}} key={lesson.lessonId} className='lessonListBox'>
                 <div onClick={() => handleLessonClick(lesson.lessonId)}>
                   {/* <img src="/images/boonga.jpg" width="200px" height="200px" alt="fox" /> */}
-                  <span> </span>{lesson.lessonName}
-                  <span> </span>| {lesson.price} 원 | {lesson.lessonSchedule} <div><br /></div>
+                 {lesson.lessonName} | {lesson.price} 원 | {lesson.lessonSchedule} 
                   </div>
               </div>
             ))
           ) : (
-            <p>등록한 클래스가 없습니다.</p>
+            <h1 style={{textAlign: "center"}}>등록한 클래스가 없습니다.</h1>
           )}<br />
         </section>
       </BasicLayout>

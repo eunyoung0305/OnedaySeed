@@ -3,6 +3,8 @@ import Button from 'react-bootstrap/Button';
 
 import BasicLayout from "../../layouts/BasicLayout"
 import axios from 'axios';
+import "./Lesson.css";
+import { useNavigate } from 'react-router';
 
 function LessonForm() {
   // 호스트 로그인 구현시 호스트 번호 받을 수 있게 변경 필요
@@ -15,6 +17,8 @@ function LessonForm() {
   const [lessonStatus, setLessonStatus] = useState("");
 //  const hostNum = useSelector((state) => state.hostLogin.hostNum);
 
+  const navigate =useNavigate();
+  
   useEffect(() => {
     const fetchHostNum = async () => {
       try {
@@ -68,10 +72,10 @@ function LessonForm() {
   return (
     <div>
       <BasicLayout>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
           <form onSubmit={handleSubmit} >
-            <h1>클래스 등록 페이지입니다</h1><br></br>
+            <h1 className="title-word"><b>클래스 등록 페이지</b></h1>
             <div>
               <label>
                 <h4>클래스명</h4>
@@ -130,7 +134,7 @@ function LessonForm() {
                 <hr />
               </label>     
             </div>
-            <Button type='submit'>저장</Button>
+            <Button type='submit' className='modifyPageBtn'>저장</Button>
           </form>
         </div>
       </BasicLayout>
