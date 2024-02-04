@@ -63,17 +63,6 @@ public class UserController {
 
         // 사용자 정보 업데이트
         try {
-                // if (userDto.getPassword() != null && !userDto.getPassword().isEmpty()) {
-               // 새로운 비밀번호와 기존 비밀번호가 다를 경우에만 암호화하여 저장
-//                if(!passwordEncoder.matches(userDto.getPassword(), userDto.getPassword())){
-               //비밀번호 암호화 작업
-//
-//                }
-//            }else {
-//                // 비밀번호를 수정하지 않은 경우 기존의 암호화된 비밀번호를 그대로 유지
-//                userDto.setPassword(userDto.getPassword());
-//            }
-
             String encodedPassword = passwordEncoder.encode(userDto.getPassword());
             userDto.setPassword(encodedPassword);
 

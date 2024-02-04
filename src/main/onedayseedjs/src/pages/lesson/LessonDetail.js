@@ -66,23 +66,26 @@ function LessonDetail() {
           <fieldset style={{ textAlign: "center" }}>
             <img style={{ width: "600px", height: "600px" }} src="/boonga.jpg" width="800" />
             <p className='fontNaming'>
-              <label className='btn fontNaming' id="fontNaming">🌱 클래스명 : </label>
-              {lessonDetail.lessonName}<br />
+              <label className='btn fontNaming' id="fontNaming">🌱 클래스명 : {lessonDetail.lessonName}<br /></label>
+
             </p>
 
             <p className='fontNaming'>
-              <label className='btn fontNaming' id="fontNaming" >🌱 클래스 날짜 : </label>
-              {lessonDetail.lessonSchedule}<br />
+              <label className='btn fontNaming' id="fontNaming" >🌱 클래스 날짜 : {lessonDetail.lessonSchedule}<br /> </label>
+
             </p>
 
             <p className='fontNaming'>
-              <label className='fontNaming' id="fontNaming" >🌱 인원 : &nbsp;</label>
-              <input value={numberOfStudents} className='styled-input' type='number' id='classStudentNum' onChange={handleInputChange} min='1'></input>
+              <label className='fontNaming' id="fontNaming">🌱 인원 : &nbsp; <input value={numberOfStudents}
+                                                                                 className='styled-input' type='number'
+                                                                                 id='classStudentNum'
+                                                                                 onChange={handleInputChange}
+                                                                                 min='1'  style={{ width: "100px", height: "80px" }}></input></label>
+
             </p>
 
             <p className='fontNaming'>
-              <label className='btn fontNaming' id="fontNaming" >🌱 클래스 가격 : </label>
-              {lessonDetail.price}<br />
+              <label className='btn fontNaming' id="fontNaming">🌱 클래스 가격 : {lessonDetail.price}<br /></label>
             </p>
 
             <button id="cartBtn" className='btn w-btn-indigo-outline w-btn-green styled-input fontNaming' type="button" onClick={handleAddToCart}>

@@ -9,13 +9,11 @@ export const store = configureStore({
     reducer: {
         login: loginReducer,
         hostLogin: hostLoginReducer,
-        // Add other reducers here
+
     },preloadedState,
 });
-
 store.subscribe(() => {
     localStorage.setItem('reduxState', JSON.stringify(store.getState()));
 });
-
 export default store;
 

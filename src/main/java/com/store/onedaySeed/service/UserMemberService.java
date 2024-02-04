@@ -38,7 +38,6 @@ public class UserMemberService implements UserDetailsService {
         userRepository.save(user);
     }
 
-
     //가입된 회원인지 확인(유효성 검증)
     public void validateDuplicateUser(User user){
         User findUser = userRepository.findByUserId(user.getUserId());
