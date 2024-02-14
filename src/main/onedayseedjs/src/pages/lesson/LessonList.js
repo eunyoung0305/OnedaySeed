@@ -45,7 +45,6 @@ function LessonList() {
                       모든 강의 보기
                     </button>
                   </div>
-
                 </div>
               </div>
             </section>

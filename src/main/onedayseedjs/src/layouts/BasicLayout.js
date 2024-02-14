@@ -59,11 +59,7 @@ const BasicLayout = ({children}) => {
           <a href={'/about'} className="nav-link active" aria-current="page" >About Us</a>
         </li>
 
-
-
           {/*   !가 붙어있어야 로그인전 화면에 노출 ! */}
-
-
 
           {/* User */}
 
@@ -119,16 +115,6 @@ const BasicLayout = ({children}) => {
               :<></>}
 
           {/*로그인한 호스트에게만 보이게*/}
-          {/*{ isHostLoggedIn ?*/}
-          {/*    <>*/}
-          {/*        <li className="nav-item">*/}
-          {/*            <a href={'/lesson/main'} className="nav-link">My Class</a>*/}
-          {/*            /!*    레슨 파일보고 페이지 맞게 연결*!/*/}
-          {/*        </li>*/}
-          {/*    </>*/}
-          {/*    :<></>}*/}
-
-          {/*로그인한 호스트에게만 보이게*/}
           { isHostLoggedIn ?
               <>
                   <li className="nav-item">
@@ -145,7 +131,6 @@ const BasicLayout = ({children}) => {
            </>
               :<></>}
 
-
       </ul>
       <form className="d-flex" role="search" onSubmit={handleSearch}>
         <input className="form-control me-2 " id="search-input" type="search" placeholder="Search" aria-label="Search" value={searchValue} onChange={(e) => setSearchValue(e.target.value)}/>
@@ -156,7 +141,6 @@ const BasicLayout = ({children}) => {
  </nav>
  <hr/>
     </header>
-
 
           <main>
             {children}
