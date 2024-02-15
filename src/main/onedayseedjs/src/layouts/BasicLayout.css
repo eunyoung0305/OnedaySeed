@@ -10,12 +10,14 @@
 }
 
 #search-input{
-  margin-top: 10px;
+  margin-top: 5px;
   height: 40px;
 }
 
 #search-btn{
+  margin-top: 5px;
   height: 40px;
+  margin-left: 10px;
 }
 
 #nav{
