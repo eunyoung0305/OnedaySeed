@@ -41,3 +41,6 @@ HTML5, CSS, JavaScript, JAVA, SpringBoot, Gradle, React, MySQL, JPA, IntelliJ, V
 
 # ERD
 ![image](https://github.com/areum1111/onedaySeed/assets/148032221/dcb1ff5b-ae58-4a0f-9f39-95bd31102a46)
+
+# ONEDAYSEED SITE
+[ONEDAYSEED](https://port-0-onedayseed-back-17xco2nlslk5asd.sel5.cloudtype.app/)
