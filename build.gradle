@@ -30,7 +30,8 @@ dependencies {
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:2.7.4'
 	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'$ git add .
+
 
 	implementation 'jakarta.persistence:jakarta.persistence-api:3.1.0'
 	implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
@@ -45,6 +46,10 @@ dependencies {
 	implementation group: 'org.springframework.security', name: 'spring-security-core', version: '6.2.1'
 //	implementation 'org.springframework.boot:spring-boot-starter-security:3.2.1'
 //	testImplementation group: 'org.springframework.security', name: 'spring-security-test', version: '6.2.1'
+
+	// https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
+	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.3.2'
+
 
 	implementation 'com.google.code.gson:gson:2.10.1'
 
