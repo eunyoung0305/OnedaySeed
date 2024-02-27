@@ -14,6 +14,7 @@ function Profile() {
     userName: '',
     password: '',
     phoneNum: '',
+    // image: '', //프로필 이미지 추가
   });
 
   // 비밀번호 이슈로 추가
@@ -48,6 +49,34 @@ function Profile() {
       setNewPassword(e.target.value);
     };
 
+    //이미지 파일 업로드
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+
+    if (!file) {
+      return;
+    }
+
+    const allowedExtensions = ["jpg", "jpeg", "png"];
+    const extension = file.name.split('.').pop().toLowerCase();
+
+    if (allowedExtensions.indexOf(extension) === -1) {
+      alert('이미지 파일(jpg, jpeg, png)만 업로드 가능합니다.');
+      return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      setUsers((prevUsers) => ({
+        ...prevUsers,
+        image: reader.result, // 프로필 이미지 변경
+      }));
+    };
+
+    reader.readAsDataURL(file);
+  };
+
     const handleSubmit = async (e) => {
       e.preventDefault(); // 기본 폼 제출 방지
 
@@ -64,6 +93,7 @@ function Profile() {
           userName: users.userName,
           password: newPassword,
           phoneNum: users.phoneNum,
+          image: users.image, // 프로필 이미지 추가
       });
 
         if (response.data.alertMessage) {
@@ -98,10 +128,17 @@ function Profile() {
         {/* <img src="/profile.jpg" width="200px" height="200px" alt="프로필 이미지" /> */}
 
         <Form onSubmit={handleSubmit}>
-          {/* <Form.Group controlId="formFileSm" className="mb-3">
-            <Form.Label>사진 수정</Form.Label>
-            <Form.Control type="file" size="sm" />
-          </Form.Group> */}
+          {users.image ? (
+              <img src={users.image} alt="프로필 이미지" width="200px" height="200px" />
+          ) : (
+              <img src="/profile.jpg" alt="프로필 이미지" width="200px" height="200px" />
+          )}
+
+
+          <Form.Group controlId="formFile" className="mb-3">
+            <Form.Label>프로필 사진 업로드</Form.Label>
+            <Form.Control type="file" accept=".jpg, .jpeg, .png" onChange={handleImageChange} />
+          </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupEmail">
             <Form.Label>아이디</Form.Label>
             <Form.Control type="text" name="userId" value={users.userId} disabled />
@@ -145,5 +182,6 @@ function Profile() {
       </div>
     );
   }
-  
+
   export default Profile;
+

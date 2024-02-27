@@ -1,6 +1,7 @@
 package com.store.onedaySeed.dto;
 
 import com.store.onedaySeed.entity.User;
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,6 +22,9 @@ public class UserDto {
 
     @NotNull(message = "비밀번호를 입력해주세요")
     private String password;
+
+    //이미지 업로드 추가
+    private String img;
 
     public UserDto(User user) {
         this.userId = user.getUserId();

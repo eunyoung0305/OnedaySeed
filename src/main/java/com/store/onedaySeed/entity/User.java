@@ -31,6 +31,10 @@ public class User extends BaseEntity{
     @Column(nullable = false)
     private String password;
 
+    //이미지 업로드 추가
+    @Column
+    private String img;
+
     @Enumerated(EnumType.STRING)
     private Role role;
 

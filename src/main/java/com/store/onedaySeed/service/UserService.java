@@ -37,6 +37,7 @@ public class UserService {
             user.setUserName(userDto.getUserName());
             user.setPhoneNum(userDto.getPhoneNum());
             user.setPassword(userDto.getPassword());
+            user.setImg(userDto.getImg());
 
             userRepository.save(user);
 

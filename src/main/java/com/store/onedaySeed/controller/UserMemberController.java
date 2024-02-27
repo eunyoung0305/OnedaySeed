@@ -77,8 +77,6 @@ public class UserMemberController {
         return "login";
     }
 
-
-
     @PostMapping("/api/userLogin")
     public ResponseEntity<?> loginUserPost(@RequestBody @Valid UserLoginDto userLoginDto,BindingResult bindingResult) {
 
@@ -129,6 +127,5 @@ public class UserMemberController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
         }
     }
-
 
 }

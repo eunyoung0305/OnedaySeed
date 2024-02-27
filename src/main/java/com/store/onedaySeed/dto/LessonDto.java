@@ -20,7 +20,6 @@ public class LessonDto {
     private Long price;
     private String lessonSchedule;
     private Integer lessonLimited;
-//    private String lessonDetailInfo;
     private LessonStatus lessonStatus;
 
     public LessonDto(Lesson lesson) {

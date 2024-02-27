@@ -2,17 +2,25 @@ package com.store.onedaySeed.controller;
 
 import com.store.onedaySeed.dto.UserDto;
 import com.store.onedaySeed.entity.User;
-import com.store.onedaySeed.service.UserMemberService;
 import com.store.onedaySeed.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -47,7 +55,7 @@ public class UserController {
         return new UserDto(user);
     }
 
-    // 유저 정보 수정 // @Valid 의존성 추가하기
+     //유저 정보 수정 // @Valid 의존성 추가하기
     @PostMapping("/api/user")
     public ResponseEntity<?> userUpdate(@RequestBody @Valid UserDto userDto, BindingResult bindingResult) {
         // @Valid로 쿼리문 유효성 검사 >> userDto
@@ -84,4 +92,6 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
         }
     }
+
+
 }
