@@ -1,0 +1,30 @@
+#title {
+    text-align: center;
+    color: #76BA99;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+img {
+    /* 상우하좌 */
+    margin: 10px 30px 50px 30px;
+    /* margin: 0 auto; */
+}
+
+form{
+    /* align-items: center; */
+    margin: 0 auto;
+    width: 500px;
+    border: none;
+    text-align: center;
+}
+
+#modify {
+    background-color: #70AF85;
+    border: none;
+    margin: 10px;
+}
+
+.name {
+    font-size: 20px;
+}

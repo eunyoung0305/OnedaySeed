@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  font-family: 'GmarketSansMedium', sans-serif;
+}
+
+#title {
+  text-align: center;
+  color: #76BA99;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.purchase-box{
+  width: 80%;
+  margin: 20px 20px;
+}
+
+.title{
+  margin: auto 15px;
+}
+.class-img{
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: blue;
+  border-radius: 10px;
+  margin: 20px;
+  float: left;
+}
+
+.class-info{
+  background-image: url('/public/boonga.jpg');
+}
+
+.class-name{
+  margin: 35px;
+}
+.class-count{
+  float: right;
+  margin-right: 20px;
+}
+
+.class-status{
+  clear: both;
+  width: 20%;
+  height: 50px;
+  margin: 30px auto;
+  border-radius: 10px;
+  border: #70AF85 solid 1px;
+  background-color: #70AF85;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#my-page{ display: block;
+  justify-content: center;
+  background-color: #70AF85;
+  border: none;
+}
+
+#my-page{
+  display: block;
+  justify-content: center;
+  background-color: #70AF85;
+  border: none;
+}

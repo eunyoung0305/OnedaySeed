@@ -1,0 +1,15 @@
+.us-box{
+  width: 70%;
+  height: 600px;
+  margin:auto auto;
+  margin-top: 70px;
+}
+.title{
+  font-size: 60px;
+  display: block;
+  margin: auto auto;
+  color:#70af85;
+}
+.bold{
+  font-size: 20px;
+}

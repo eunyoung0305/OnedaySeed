@@ -1,0 +1,177 @@
+
+.video-box {
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px; 
+  position: relative; }
+
+video{
+height: 100%;
+width: 100%;
+z-index: -100;
+padding: 0px;
+}
+
+/* .nav-box */
+.logo, nav{ 
+position: absolute;
+top: 15%;
+width: 100%;
+ height: 100px;
+ }
+
+.logo-title {
+ text-align: center; 
+ z-index: 100; 
+ color: white; 
+ font-family: 'Cafe24Moyamoya-Regular-v1.0';
+ font-size: 150px;
+ top: 35%;
+
+width: 100%;
+left: auto;
+}
+
+.body-box{
+width: 100%;
+height: 345px;
+position: relative;
+}
+
+.body-wrap{
+  width: 90%;
+  position: absolute;
+  left: 5%;
+}
+
+/* 368*326 */
+.category-box{
+  margin-top: 20px;
+  border: 3px double green;
+  /* margin-left: 40px; */
+  width: 55%;
+  border-radius: 10px;
+  float: left;
+  height: 326px;
+  position: relative;
+  
+  display: flex;
+  justify-content: center;
+  }
+
+  .wrap{
+    width: 90%;
+    top: 10%;
+    position: absolute;
+    height: 80%;
+  }
+
+.category-header{
+background-color: yellowgreen;
+border: none;
+width: 60%;
+height: 80px;
+border-radius: 30px;
+font-size: 20px;
+position: absolute;
+left: 20%;
+}
+
+
+#btn1{
+  width: 25%;
+  height: 20%;
+  font-size: 20px;
+  position: absolute;
+  margin: 20px;
+  top: 40%;
+}
+
+#btn2{
+  width: 25%;
+  height: 20%;
+  font-size: 20px;
+  position: absolute;
+  margin: 20px;
+  top: 40%;
+  left: 35%;
+ }
+
+ #btn3{
+  width: 25%;
+  height: 20%;
+  font-size: 20px;
+  position: absolute;
+  margin: 20px;
+  top: 40%;
+  left: 70%;
+ }
+
+ #btn4{
+  width: 25%;
+  height: 20%;
+  font-size: 20px;
+  position: absolute;
+  margin: 20px;
+  top: 70%;
+}
+
+#btn5{
+  width: 25%;
+  height: 20%;
+  font-size: 20px;
+  position: absolute;
+  margin: 20px;
+  top: 70%;
+  left: 35%;
+ }
+
+ #btn6{
+  width: 25%;
+  height: 20%;
+  font-size: 20px;
+  position: absolute;
+  margin: 20px;
+  top: 70%;
+  left: 70%;
+ }
+
+.mbti-box{
+  margin-top: 20px;
+  border: 3px double green;
+  margin-left: 5%;
+  width: 40%;
+  height: 326px;
+  border-radius: 10px;
+  float: left;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+  .mbti{
+  width: 100%;
+  height: 326px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-radius: 10px;
+
+
+  }
+
+  .mbti-img{
+  background-image: url('../img/thumbnail_pick.jpg');
+    border: 3px double green;
+
+  }
+
+
+
+
+
+
+

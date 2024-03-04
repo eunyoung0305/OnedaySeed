@@ -1,0 +1,95 @@
+
+.loginBox{
+    width: 350px;
+    height: 400px;
+    margin: 0 auto;
+
+
+    h1{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 30px;
+        color: #70AF85;
+    }
+
+}
+
+.formName{
+    width: 80px;
+    display: block;
+    float: left;
+    margin-right: 20px;
+}
+
+.formInfo{
+    width: 200px;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.hostNumBox{
+    width: 500px;
+
+}
+
+.checkButton{
+    float: left;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #70AF85  ;
+    color: white;
+    background-color: #70AF85;
+    height: 30px;
+}
+
+.loginBtn{
+    display: flex;
+    justify-content: center;
+    clear: both;
+    button{
+        width: 80px;
+        height: 40px;
+        border-radius: 10px;
+        border: 1px solid #70AF85  ;
+        color: white;
+        background-color: #70AF85;
+    }
+}
+
+
+.another-login {
+    display: flex;
+    justify-content: center;
+    color: gray;
+    margin-top: 10px;
+}
+
+
+.choiceNewmember{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+.newmember{
+    display: flex;
+    justify-content: center;
+    button{
+        margin-right: 20px;
+        width: 300px;
+        height: 40px;
+        border-radius: 10px;
+        border: #70AF85 solid 1px;
+    }
+    a{
+        text-decoration-line: none;
+        color: black;
+    }
+}
+
+.another-btn{
+    background-color: #70AF85;
+    color: white;
+}
+
