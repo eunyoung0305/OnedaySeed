@@ -132,36 +132,36 @@ const HostLoginPage = () => {
 
     }
 
-  return(
-    <>
+    return(
+        <>
 
-    <BasicLaylout>
-    <div className="loginBox">
-            <h1><b>로그인</b></h1>
+            <BasicLaylout>
+                <div className="loginBox">
+                    <h1><b>로그인</b></h1>
 
-                <Form onSubmit={handleSubmit}>
-                <span className="formName">사업자번호</span>
-                <input className="formInfo" type="text" id="id_val" name="hostNum" onChange={handleInputChange} value={login.hostNum} placeholder="사업자번호를 입력해주세요" />
+                    <Form onSubmit={handleSubmit}>
+                        <span className="formName">사업자번호</span>
+                        <input className="formInfo" type="text" id="id_val" name="hostNum" onChange={handleInputChange} value={login.hostNum} placeholder="사업자번호를 입력해주세요" />
 
-                <span className="formName">비밀번호</span>
-                <input className="formInfo" type="password" id="password_val" name="password"  onChange={handleInputChange} value={login.password}placeholder="비밀번호를 입력해주세요"/>
+                        <span className="formName">비밀번호</span>
+                        <input className="formInfo" type="password" id="password_val" name="password"  onChange={handleInputChange} value={login.password}placeholder="비밀번호를 입력해주세요"/>
 
-            <div className="loginBtn">
-                <button className="s_bt" type="submit" >로그인</button>
-            </div>
-                </Form>
+                        <div className="loginBtn">
+                            <button className="s_bt" type="submit" >로그인</button>
+                        </div>
+                    </Form>
 
-            <Link to={"/user/login"} className="another-login">게스트로 로그인하기</Link>
+                    <Link to={"/user/login"} className="another-login">게스트로 로그인하기</Link>
 
-          <span className="choiceNewmember">아직 회원이 아니신가요?</span>
-          <div className="newmember">
-              <button className="another-btn"><Link to={"/host/new"}>호스트 회원가입</Link></button>
-              <button className="another-btn"><Link to={"/user/new"}>게스트 회원가입</Link></button>
-          </div>
+                    <span className="choiceNewmember"><b>아직 회원이 아니신가요?</b></span>
+                    <div className="newmember">
+                        <button className="another-btn"><Link to={"/host/new"}>호스트 회원가입</Link></button>
+                        <button className="another-btn"><Link to={"/user/new"}>게스트 회원가입</Link></button>
+                    </div>
 
-          </div>
-     </BasicLaylout>
-    </>
-  )
+                </div>
+            </BasicLaylout>
+        </>
+    )
 }
 export default HostLoginPage;

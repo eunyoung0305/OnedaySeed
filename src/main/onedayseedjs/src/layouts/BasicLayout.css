@@ -17,14 +17,14 @@
 #search-btn{
   margin-top: 5px;
   height: 40px;
-  margin-left: 10px;
+  margin-left: 5px;
+  width: 100px;
+  padding: 0px;
 }
 
 #nav{
   margin-top: 10px;
 }
-
-
 
 .footer-body{
   display: flex;
@@ -35,7 +35,73 @@
   margin: 20px auto;
   clear: both;
   font-size: 20px;
-} 
+}
+
 .our-info, .not-host{
-    font-size: 14px;
+  font-size: 14px;
+}
+
+
+@media all and (max-width: 768px){
+  #logo{
+    font-size: 15px;
+    color: hsl(140, 28%, 56%);
+    font-family: 'Cafe24Moyamoya-Regular-v1.0';
   }
+
+  #search-btn{
+    margin-top: 5px;
+    height: 20px;
+    margin-left: 0px;
+    font-size: 5px;
+    width: 25px;
+    padding:0px;
+  }
+
+  #search-input{
+    margin-top: 5px;
+    height: 20px;
+    width: 60px;
+    font-size: 5px;
+    margin-left: 0px;
+  }
+
+  .nav-item{
+    font-size: 5px;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1.3em;
+  }
+
+  .footer-body{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 360px;
+    height: 80px;
+    margin: 20px auto;
+    clear: both;
+    font-size: 8px;
+  }
+  .our-info, .not-host{
+    font-size: 8px;
+  }
+
+  .nav-link{
+    margin-top: 5px;
+    padding: 0px;
+  }
+
+  #nav{
+    margin-top: 10px;
+    height: 30%;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  header{
+    padding: 0;
+    margin: 0;
+  }
+
+}

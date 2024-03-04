@@ -40,7 +40,7 @@ function LessonList() {
               <div className="container text-center">
                 <div className="row">
                   <div className="col-12" >
-                    <h1>검색 결과가 없습니다.<br/> 이런 강의는 어떠세요?</h1>
+                    <h1 className='no-search'>검색 결과가 없습니다.<br/> 이런 강의는 어떠세요?</h1>
                     <button className="allLesson" onClick={() => navigate('/lesson/list')}>
                       모든 강의 보기
                     </button>
@@ -64,8 +64,8 @@ function LessonList() {
                               lesson.lessonName.includes(searchQuery) || lesson.lessonCategory.includes(searchQuery)
                       )
                       .map((lesson) => (
-                          <div className="col-lg-6" key={lesson.lessonId}>
-                            <div className="card" style={{ width: '35rem' , marginRight:"15px"}}>
+                          <div className="col-lg-6" id="lesson-form" key={lesson.lessonId}>
+                            <div className="card" >
                               <img src="/boonga.jpg" className="card-img-top" alt="..." />
                               <div className="card-body">
                                 <h5 className="card-title">{lesson.lessonName}</h5>

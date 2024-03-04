@@ -13,3 +13,30 @@
 .bold{
   font-size: 20px;
 }
+
+@media all and (max-width: 768px){
+
+  .us-box{
+    width: 80%;
+    height: 100%;
+    margin:5px auto 0px auto;
+    margin-top: 10px;
+  }
+  .title{
+    font-size: 30px;
+    display: block;
+    margin: 5px auto;
+    color:#70af85;
+  }
+
+  .bold{
+    font-size: 14px;
+  }
+
+  span{
+    font-size: 10px;
+  }
+  body{
+    line-height: 1.0em;
+  }
+}

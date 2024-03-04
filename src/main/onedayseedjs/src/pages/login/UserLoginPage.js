@@ -63,29 +63,29 @@ const UserLoginPage =()=>{
     // 서버로 사용자 ID 전송(마이페이지)
     const sendUserIdToServer = async (userId) => {
         try {
-          await axios.post("/api/sendUserId", { userId });
+            await axios.post("/api/sendUserId", { userId });
         } catch (error) {
-          console.error('서버로 사용자 ID 전송 실패:', error);
+            console.error('서버로 사용자 ID 전송 실패:', error);
         }
-      };
+    };
 
-      // 서버로 사용자 ID 전송(카트)
-      const sendUserIdToCart = async (userId) => {
+    // 서버로 사용자 ID 전송(카트)
+    const sendUserIdToCart = async (userId) => {
         try {
-          await axios.post("/api/cart/sendUserId", { userId });
+            await axios.post("/api/cart/sendUserId", { userId });
         } catch (error) {
-          console.error('서버로 사용자 ID 전송 실패:', error);
+            console.error('서버로 사용자 ID 전송 실패:', error);
         }
-      };
+    };
 
-      // 서버로 사용자 ID 전송(오더)
-      const sendUserIdToOrder = async (userId) => {
+    // 서버로 사용자 ID 전송(오더)
+    const sendUserIdToOrder = async (userId) => {
         try {
-          await axios.post("/api/order/sendUserId", { userId });
+            await axios.post("/api/order/sendUserId", { userId });
         } catch (error) {
-          console.error('서버로 사용자 ID 전송 실패:', error);
+            console.error('서버로 사용자 ID 전송 실패:', error);
         }
-      };
+    };
     const handleSubmit = async (e) => {
 
         // 새로고침 방지
@@ -155,41 +155,41 @@ const UserLoginPage =()=>{
                 // 기타 에러
                 console.error('Unexpected error:', error.message);
             }
-          }
+        }
 
     }
     return(
-      <>
-      <BasicLaylout>
-      <div className="loginBox">
-        <h1><b>로그인</b></h1>
+        <>
+            <BasicLaylout>
+                <div className="loginBox">
+                    <h1><b>로그인</b></h1>
 
-            <Form onSubmit={handleSubmit}>
-            <span className="formName">아이디</span>
-            <input className="formInfo" type="text" id="id_val" placeholder="아이디를 입력해주세요" name="userId" value={login.userId} onChange={handleInputChange}></input>
+                    <Form onSubmit={handleSubmit}>
+                        <span className="formName">아이디</span>
+                        <input className="formInfo" type="text" id="id_val" placeholder="아이디를 입력해주세요" name="userId" value={login.userId} onChange={handleInputChange}></input>
 
-            <span className="formName">비밀번호</span>
-            <input className="formInfo" type="password" id="password_val" placeholder="비밀번호를 입력해주세요" name="password" value={login.password} onChange={handleInputChange}></input>
+                        <span className="formName">비밀번호</span>
+                        <input className="formInfo" type="password" id="password_val" placeholder="비밀번호를 입력해주세요" name="password" value={login.password} onChange={handleInputChange}></input>
 
 
 
-          <div className="loginBtn">
-           <button className="s_bt" type="submit" >로그인</button>
-            </div>
+                        <div className="loginBtn">
+                            <button className="s_bt" type="submit" >로그인</button>
+                        </div>
 
-            </Form>
+                    </Form>
 
-        <Link to={"/host/login"} className="another-login">호스트로 로그인하기</Link>
+                    <Link to={"/host/login"} className="another-login">호스트로 로그인하기</Link>
 
-      <span className="choiceNewmember">아직 회원이 아니신가요?</span>
-      <div className="newmember">
-          <button className="another-btn"><Link to={"/host/new"} >호스트 회원가입</Link></button>
-          <button className="another-btn"><Link to={"/user/new"} >게스트 회원가입</Link></button>
-      </div>
+                    <span className="choiceNewmember"><b>아직 회원이 아니신가요?</b></span>
+                    <div className="newmember">
+                        <button className="another-btn"><Link to={"/host/new"} >호스트 회원가입</Link></button>
+                        <button className="another-btn"><Link to={"/user/new"} >게스트 회원가입</Link></button>
+                    </div>
 
-      </div>
-      </BasicLaylout>
-      </>
+                </div>
+            </BasicLaylout>
+        </>
     )
 
 }

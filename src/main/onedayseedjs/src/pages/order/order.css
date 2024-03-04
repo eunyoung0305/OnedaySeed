@@ -75,3 +75,46 @@
   background-color: #70AF85;
   border: none;
 }
+
+@media all and (max-width: 768px){
+
+  #title{
+    font-size: 25px;
+  }
+
+  .class-img{
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: blue;
+    border-radius: 10px;
+    margin: 0 15px 15px 15px;
+    float: left;
+  }
+
+  .class-name,.class-date,.class-count,.class-status{
+    font-size: 10px;
+  }
+
+  .class-name{
+    margin: 40px 35px 35px 35px;
+  }
+  .class-count{
+    float: right;
+    margin-right: 20px;
+    margin-top: 5px;
+    width: 20%;
+  }
+
+  .class-date{
+    width: 20%;
+  }
+
+  .class-status{
+    width: 80%;
+    height: 30px;
+    margin-top: 10px;
+  }
+}

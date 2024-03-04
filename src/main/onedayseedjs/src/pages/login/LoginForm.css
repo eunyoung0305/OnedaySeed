@@ -30,8 +30,8 @@
 
 .hostNumBox{
     width: 500px;
-
 }
+
 
 .checkButton{
     float: left;
@@ -93,3 +93,113 @@
     color: white;
 }
 
+
+@media all and (max-width: 768px){
+
+    .loginBox{
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding-left: 5%;
+
+        h1{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: 25px;
+            color: #70AF85;
+        }
+
+    }
+
+    .formName{
+        width: 20%;
+        display: block;
+        /* float: left; */
+        font-size: 10px;
+    }
+
+    .formInfo{
+        width: 70%;
+        /* float: left; */
+        margin-bottom: 20px;
+        font-size: 10px;
+    }
+
+    .hostNumBox{
+        width:100%;
+    }
+
+    .checkButton{
+        /* float: left; */
+        width: 20%;
+        margin-left: 3px;
+        border-radius: 10px;
+        border: 1px solid #70AF85  ;
+        color: white;
+        background-color: #70AF85;
+        height: 25px;
+        font-size: 8px;
+    }
+
+    .loginBtn{
+        display: flex;
+        justify-content: center;
+        clear: both;
+        button{
+            width: 80px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid #70AF85  ;
+            color: white;
+            background-color: #70AF85;
+        }
+        font-size: 10px;
+    }
+
+
+    .another-login {
+        display: flex;
+        justify-content: center;
+        color: gray;
+        margin-top: 10px;
+        font-size: 10px;
+    }
+
+
+    .choiceNewmember{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 30px 0 20px 0;
+        font-size: 10px;
+    }
+    .newmember{
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        button{
+            margin-right: 20px;
+            width: 300px;
+            height: 40px;
+            border-radius: 10px;
+            border: #70AF85 solid 1px;
+        }
+        a{
+            text-decoration-line: none;
+            color: black;
+        }
+    }
+
+    #hostnum-name{
+        width: 20%;
+    }
+    #hostnum-info{
+        width: 50%;
+    }
+
+    .host-box{
+        width: 100%;
+    }
+
+}

@@ -160,53 +160,54 @@ const NewHostPage = () => {
                         <b>회원가입</b>
                     </h1>
                     <Form onSubmit={handleSubmit}>
+                        <div className="host-box">
+                            <div className="hostNumBox">
+                                <span className="formName" id="hostnum-name">사업자번호</span>
 
-                        <span className="formName">사업자번호</span>
-                        <div className="hostNumBox">
-                            <input className="formInfo"
-
-                                   type="text"
-                                   placeholder="사업자번호를 입력해주세요"
-                                   name="hostNum"
-                                   onChange={handleInputChange}
-                                   value={newMember.hostNum}
+                                <input className="formInfo" id="hostnum-info"
+                                       type="text"
+                                       placeholder="사업자번호를 입력해주세요"
+                                       name="hostNum"
+                                       onChange={handleInputChange}
+                                       value={newMember.hostNum}
+                                />
+                                <button type="button" className="checkButton" onClick={handleCheckLicenseNumber}>
+                                    사업자번호 확인
+                                </button>
+                            </div>
+                            <span className="formName">비밀번호</span>
+                            <input
+                                className="formInfo"
+                                type="password"
+                                placeholder="비밀번호를 입력해주세요"
+                                name="password"
+                                onChange={handleInputChange}
+                                value={newMember.password}
                             />
-                            <button type="button" className="checkButton" onClick={handleCheckLicenseNumber}>
-                                사업자번호 확인
-                            </button>
-                        </div>
-                        <span className="formName">비밀번호</span>
-                        <input
-                            className="formInfo"
-                            type="password"
-                            placeholder="비밀번호를 입력해주세요"
-                            name="password"
-                            onChange={handleInputChange}
-                            value={newMember.password}
-                        />
 
-                        <span className="formName">상호명</span>
-                        <input
-                            className="formInfo"
-                            type="text"
-                            placeholder="상호명을 입력해주세요"
-                            name="hostName"
-                            onChange={handleInputChange}
-                            value={newMember.hostName}
-                        />
+                            <span className="formName">상호명</span>
+                            <input
+                                className="formInfo"
+                                type="text"
+                                placeholder="상호명을 입력해주세요"
+                                name="hostName"
+                                onChange={handleInputChange}
+                                value={newMember.hostName}
+                            />
 
-                        <span className="formName">전화번호</span>
-                        <input
-                            className="formInfo"
-                            type="text"
-                            placeholder="전화번호를 입력해주세요"
-                            name="phoneNum"
-                            onChange={handleInputChange}
-                            value={newMember.phoneNum}
-                        />
+                            <span className="formName">전화번호</span>
+                            <input
+                                className="formInfo"
+                                type="text"
+                                placeholder="전화번호를 입력해주세요"
+                                name="phoneNum"
+                                onChange={handleInputChange}
+                                value={newMember.phoneNum}
+                            />
 
-                        <div className="loginBtn">
-                            <button type="submit">회원가입</button>
+                            <div className="loginBtn">
+                                <button type="submit">회원가입</button>
+                            </div>
                         </div>
                     </Form>
                 </div>

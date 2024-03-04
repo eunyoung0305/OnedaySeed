@@ -125,30 +125,32 @@ const NewUserPage=()=>{
 
 
     return(
-      <BasicLaylout>
+        <BasicLaylout>
 
-      <div className="loginBox">
-        <h1><b>회원가입</b></h1>
-          <Form onSubmit={handleSubmit}>
-            <span className="formName">아이디</span>
-            <input className="formInfo" type="text" id="id_val" placeholder="아이디를 입력해주세요"  name="userId" onChange={handleInputChange} value={newMember.userId}/>
-       
-            <span className="formName">비밀번호</span>
-            <input className="formInfo" type="password" id="password_val" placeholder="비밀번호를 입력해주세요" name="password" onChange={handleInputChange} value={newMember.password}/>
+            <div className="loginBox">
+                <h1><b>회원가입</b></h1>
+                <Form onSubmit={handleSubmit}>
+                    <div className="form-box">
+                        <span className="formName">아이디</span>
+                        <input className="formInfo" type="text" id="id_val" placeholder="아이디를 입력해주세요"  name="userId" onChange={handleInputChange} value={newMember.userId}/>
 
-            <span className="formName" >이름</span>
-            <input className="formInfo" type="text" id="name_val" placeholder="이름을 입력해주세요" name="userName" onChange={handleInputChange} value={newMember.userName} />
+                        <span className="formName">비밀번호</span>
+                        <input className="formInfo" type="password" id="password_val" placeholder="비밀번호를 입력해주세요" name="password" onChange={handleInputChange} value={newMember.password}/>
 
-            <span className="formName">전화번호</span>
-          <input className="formInfo" type="text" id="phoneNum_val" placeholder="전화번호를 입력해주세요" name="phoneNum" onChange={handleInputChange} value={newMember.phoneNum}/>
+                        <span className="formName" >이름</span>
+                        <input className="formInfo" type="text" id="name_val" placeholder="이름을 입력해주세요" name="userName" onChange={handleInputChange} value={newMember.userName} />
 
-          <div className="loginBtn">
-              <button type="submit">회원가입</button>
-          </div>
-          </Form>
-      </div>
-      </BasicLaylout>
-      
+                        <span className="formName">전화번호</span>
+                        <input className="formInfo" type="text" id="phoneNum_val" placeholder="전화번호를 입력해주세요" name="phoneNum" onChange={handleInputChange} value={newMember.phoneNum}/>
+
+                        <div className="loginBtn">
+                            <button type="submit">회원가입</button>
+                        </div>
+                    </div>
+                </Form>
+            </div>
+        </BasicLaylout>
+
     );
-    }
+}
 export default NewUserPage;

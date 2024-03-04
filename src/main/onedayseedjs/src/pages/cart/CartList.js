@@ -24,7 +24,7 @@ function CartList({ item, onItemDelete }) {
 
     const handleDecrease = () => {
         if (personCount > 1) {
-        setPersonCount(prevCount => prevCount - 1);
+            setPersonCount(prevCount => prevCount - 1);
         }
     };
 
@@ -38,91 +38,91 @@ function CartList({ item, onItemDelete }) {
                 lessonSchedule: item.lessonSchedule,
                 count: personCount,
                 price: item.price,
-          });
-    
+            });
+
             if (response.data.alertMessage) {
-              // 에러 또는 성공 메시지가 있으면 alert 창 띄우기
-              alert(response.data.alertMessage);
+                // 에러 또는 성공 메시지가 있으면 alert 창 띄우기
+                alert(response.data.alertMessage);
             }
-        
+
             if (response.data.successMessage) {
-              console.log('Form submitted successfully:', response.data.successMessage);
-              window.location.reload();
+                console.log('Form submitted successfully:', response.data.successMessage);
+                window.location.reload();
             }
-          } catch (error) {
-              if (error.response) {
+        } catch (error) {
+            if (error.response) {
                 // 서버 응답이 에러인 경우
                 console.error('Error submitting form:', error.response.data);
                 // 클라이언트에서 에러 메시지 처리 로직 추가
-              } else if (error.request) {
+            } else if (error.request) {
                 // 요청이 전혀 이루어지지 않은 경우
                 console.error('Request error:', error.request);
-              } else {
+            } else {
                 // 기타 에러
                 console.error('Unexpected error:', error.message);
-              }
-          }
-      };
-
-      // 삭제
-      const handleDelete = async () => {
-        try {
-          // 서버에 삭제 요청 전송
-          await axios.delete(`/api/cart/${item.cartItemId}`);
-          // 삭제된 아이템을 부모 컴포넌트에서 처리
-          onItemDelete(item.cartItemId);
-          window.location.reload();
-        } catch (error) {
-          console.error('Error deleting item:', error);
-        }
-      };
-
-      // 결제
-      const handleOrder = async () => {
-        if (window.confirm(`결제하려는 수업과 인원이 '${item.lessonName} ${item.count}명' 맞습니까?`)) {
-          try {
-            await axios.post(`/api/cart/order/${item.cartItemId}`);
-            alert("결제되었습니다.");
-            window.location.reload();
-          } catch (error) {
-            if (error.response) {
-              console.error(error.response.data);
-            } else {
-              console.error("Error during the request");
             }
-            alert("결제 중 오류가 발생했습니다.");
-          }
-        } else {
-          window.location.reload();
         }
-      };
+    };
+
+    // 삭제
+    const handleDelete = async () => {
+        try {
+            // 서버에 삭제 요청 전송
+            await axios.delete(`/api/cart/${item.cartItemId}`);
+            // 삭제된 아이템을 부모 컴포넌트에서 처리
+            onItemDelete(item.cartItemId);
+            window.location.reload();
+        } catch (error) {
+            console.error('Error deleting item:', error);
+        }
+    };
+
+    // 결제
+    const handleOrder = async () => {
+        if (window.confirm(`결제하려는 수업과 인원이 '${item.lessonName} ${item.count}명' 맞습니까?`)) {
+            try {
+                await axios.post(`/api/cart/order/${item.cartItemId}`);
+                alert("결제되었습니다.");
+                window.location.reload();
+            } catch (error) {
+                if (error.response) {
+                    console.error(error.response.data);
+                } else {
+                    console.error("Error during the request");
+                }
+                alert("결제 중 오류가 발생했습니다.");
+            }
+        } else {
+            window.location.reload();
+        }
+    };
 
     return (
         <div className='all'>
             <div className='thumb'>
                 <img src="/thumb.jpg" width='300px' height='278px' />
             </div>
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit} id="cart-form">
                 <CloseButton className='closeButton' onClick={handleDelete}/>
                 <Form.Group as={Row} className="mb-3" controlId="formGroupName">
-                    <Form.Label column sm="3">클래스</Form.Label>
-                    <Col sm="9"><Form.Control plaintext readOnly value={item.lessonName}/></Col>
+                    <Form.Label column sm="3" className='cart-small label'>클래스</Form.Label>
+                    <Col sm="9"><Form.Control plaintext readOnly value={item.lessonName} className='cart-small'/></Col>
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3" controlId="formGroupDate">
-                    <Form.Label column sm="3">날짜</Form.Label>
-                    <Col sm="9"><Form.Control plaintext readOnly value={item.lessonSchedule}/></Col>
+                    <Form.Label column sm="3" className='cart-small label'>날짜</Form.Label>
+                    <Col sm="9"><Form.Control plaintext readOnly value={item.lessonSchedule} className='cart-small'/></Col>
                 </Form.Group>
                 <div className='caret'>
                     <i className="bi bi-caret-down-fill" onClick={handleDecrease} />
                     <i className="bi bi-caret-up-fill" onClick={handleIncrease} />
                 </div>
                 <Form.Group as={Row} className="mb-3" controlId="formGroupPerson">
-                    <Form.Label column sm="3">인원</Form.Label>
-                    <Col sm="9"><Form.Control value={personCount}/></Col>
+                    <Form.Label column sm="3" className='cart-small label'>인원</Form.Label>
+                    <Col sm="9"><Form.Control value={personCount} className='cart-small'/></Col>
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3" controlId="formGroupPrice">
-                    <Form.Label column sm="3">가격</Form.Label>
-                    <Col sm="9"><Form.Control plaintext readOnly value={totalPrice}/></Col>
+                    <Form.Label column sm="3" className='cart-small label'>가격</Form.Label>
+                    <Col sm="9"><Form.Control plaintext readOnly value={totalPrice} className='cart-small'/></Col>
                 </Form.Group>
                 <Button id="modify" variant="primary" type="submit">수정</Button>
                 <Button id="order" variant="success" onClick={handleOrder}>결제</Button>
