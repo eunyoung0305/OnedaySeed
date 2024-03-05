@@ -91,11 +91,11 @@ function LessonList() {
                 <div className="row">
                   {lessonList.map((lesson) => (
                       <div className="col-lg-6" key={lesson.lessonId}>
-                        <div className="card" style={{ width: '35rem' , marginRight:"15px"}}>
+                        <div className="card" >
                           <img src="/boonga.jpg" className="card-img-top" alt="..." />
                           <div className="card-body">
                             <h5 className="card-title">{lesson.lessonName}</h5>
-                            <h5 className="card-title">{lesson.lessonCategory}</h5>
+                            <h5 className="card-category">{lesson.lessonCategory}</h5>
                             <button className='detailBtn' onClick={() => handleLessonClick(lesson.lessonId)}>상세 보기</button>
                           </div>
                         </div>

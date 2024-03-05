@@ -64,24 +64,21 @@ function LessonDetail() {
         <hr />
         <form action="/cart" method="get">
           <fieldset style={{ textAlign: "center" }}>
-            <img style={{ width: "600px", height: "600px" }} src="/boonga.jpg" width="800" />
+            <img  src="/boonga.jpg" className="detail-img" />
             <p className='fontNaming'>
               <label className='btn fontNaming' id="fontNaming">🌱 클래스명 : {lessonDetail.lessonName}<br /></label>
-
             </p>
 
             <p className='fontNaming'>
               <label className='btn fontNaming' id="fontNaming" >🌱 클래스 날짜 : {lessonDetail.lessonSchedule}<br /> </label>
-
             </p>
 
             <p className='fontNaming'>
-              <label className='fontNaming' id="fontNaming">🌱 인원 : &nbsp; <input value={numberOfStudents}
+              <label className='fontNaming students-num' id="fontNaming">🌱 인원 : &nbsp; <input value={numberOfStudents}
                                                                                  className='styled-input' type='number'
                                                                                  id='classStudentNum'
                                                                                  onChange={handleInputChange}
-                                                                                 min='1'  style={{ width: "100px", height: "80px" }}></input></label>
-
+                                                                                 min='1'  ></input></label>
             </p>
 
             <p className='fontNaming'>
@@ -94,9 +91,9 @@ function LessonDetail() {
           </fieldset>
           <hr />
           <div style={{ textAlign: "center" }}>
-            <img src="/boonga2.jpeg" width="800" />
+            <img className="detail-img" src="/boonga2.jpeg"  />
             <br />
-            <img src="/boonga3.jpeg" width="800" />
+            <img className="detail-img" src="/boonga3.jpeg" />
           </div>
         </form>
       </BasicLayout>

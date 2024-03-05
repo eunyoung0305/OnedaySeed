@@ -91,6 +91,17 @@
   margin-left: 15px;
   width: 35rem;
 }
+.detail-img{
+  width: 800px;
+}
+
+.styled-input{
+  height: 60px;
+  width: 100px;
+}
+.students-num{
+  height: 50px;
+}
 
 @media all and (max-width: 768px){
 
@@ -141,4 +152,47 @@
   #classPlusBtn-word{
     font-size: 10px;
   }
+
+  .card{
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .card-title, .card-category{
+    font-size: 14px;
+  }
+
+, .card-category{
+  font-size: 10px;
+}
+
+  .detailBtn{
+    background-color: #70AF85;
+    border-radius: 5px ;
+    border: #70AF85 solid 1px;
+    margin: 10px;
+    color: white;
+    height: 40px;
+    width: 70px;
+    font-size: 10px;
+  }
+
+  #fontNaming{
+    font-size: 13px;
+  }
+
+  #cartBtn{
+    border-radius: 5px;
+    background-color: #70AF85;
+    width: 80px;
+    font-size: 14px;
+    height: 50px;
+  }
+
+  .detail-img{
+    width: 85%;
+    margin: 0 auto;
+  }
+
+
 }
